@@ -1,7 +1,6 @@
 //@ts-ignore
 import Image from "next/image";
 import offer1 from "../../../../public/img/offer1.png"
-import MailContent from "../CardComponents/MailCard";
 const CollectionCard = ({ imagepath, text, paragraph }) => {
     return (
         <div>
@@ -18,10 +17,6 @@ const CollectionCard = ({ imagepath, text, paragraph }) => {
                 </div>
             </div>
         </div>
-            <div>
-            <MailContent />
-
-            </div>
         </div>
     )
 }

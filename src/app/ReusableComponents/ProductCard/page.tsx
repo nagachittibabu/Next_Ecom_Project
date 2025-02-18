@@ -1,3 +1,4 @@
+"use client"
 import { useItemContext } from "@/app/contextAPI/ItemsProvider";
 import {  useState } from "react";
 import Link from "next/link";
