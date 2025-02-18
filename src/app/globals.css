@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+body{
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(246, 246, 246);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (width < 770px) {
+   .body{
+    margin-left: 0px;
+    
+   }
+}
+
+
+
+@media (width < 760px) {
+  .between{
+   display: flex;
+   font-size: large;
+   font-weight: 600;
+   justify-content: space-between;
+   align-items: center;
+  }
+  .hide{
+    display: none;
+  }
+  .center {
+    display: grid;
+    place-items: center;
+
+  }
+  .widthfull{
+    width: 100%;
+  }
+}
+
+@media (width <640px){
+   .half{
+    width: 50%;
+   }
+   .fontsmall{
+    font-size: 12px;
+   }
+   .padding0{
+    padding: 0;
+   }
+}
+
+@media (width <500px){
+  .hidecontent{
+    display: none;
+  }
+}
+
+@media (width <430px){
+  .container{
+    margin-left: 0px;
+  }
+}
+@media (width <380px){
+  .container{
+    margin-left: 0px;
+  }
+  .fullwidth{
+    width: 100%;
+  }
+}
