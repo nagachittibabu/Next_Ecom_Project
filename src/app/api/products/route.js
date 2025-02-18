@@ -1,6 +1,6 @@
 import DBConnect from "../../../utils/config/db"
 import {NextResponse} from "next/server";
-import ProductModel from "@/utils/models/product";
+import ProductModel from "../../../utils/models/Product";
 export async function GET(){
     await DBConnect();
     try {
