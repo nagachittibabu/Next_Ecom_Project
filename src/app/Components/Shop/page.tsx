@@ -19,9 +19,9 @@ const ShopPage = () => {
                         {product.map((element:any,index:any) => {
                             return (
                                 <div className="flex flex-wrap w-full" key={index}>
-                                    {element.products.map(e => {
+                                    {element.products.map((e:any,i:any) => {
                                         return (
-                                            <div className="w-1/3">
+                                            <div className="w-1/3" key={i}>
                                                 <ProductCard imagepath={e.image} title={e.producttitle} price={e.price} description={e.description} category={e.category_name} product_id={e.id}/>
                                             </div>
                                         )
