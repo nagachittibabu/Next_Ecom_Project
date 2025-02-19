@@ -4,7 +4,6 @@ import Header from "../ReusableComponents/Header/page";
 import Homecard from "../ReusableComponents/HomeCategory/page"
 import ProductCard from "../ReusableComponents/ProductCard/page";
 import ServiceCard from "../ReusableComponents/Services/page";
-import Collectioncontent from "../ReusableComponents/CardComponents/DiffCollection";
 import { useItemContext } from "../contextAPI/ItemsProvider";
 import ProductsPage from "../Products/page";
 import { useEffect, useState } from "react";
@@ -60,9 +59,6 @@ const Ecommerce = ({ username }: { username: String }) => {
                                     )
                                 })
                             ) : <div><h1>Loading...</h1></div>}
-                        </div>
-                        <div className="flex ">
-                            <Collectioncontent />
                         </div>
                         <div className="w-full bg-white rounded-md shadow-md ">
                             <div className="flex justify-center items-center h-11 m-10 w-full text-center">
