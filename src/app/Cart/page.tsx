@@ -11,7 +11,7 @@ const Cart = () => {
   const [discount, setDiscount] = useState(0);
   const [productCount, setProductCount] = useState(1);
   const [itemcount, setItemcount] = useState(0);
-
+  useEffect(() => {
   const UserFetch = async () => {
     try {
       let response = await fetch("http://localhost:3000/api/users/1");
@@ -21,8 +21,6 @@ const Cart = () => {
       console.log(error);
     }
   };
-
-  useEffect(() => {
     UserFetch();
   }, []);
 
