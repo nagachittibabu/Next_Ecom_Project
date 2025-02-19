@@ -1,6 +1,6 @@
 
 
-import ProductModel from "../../../utils/models/Product";
+import ProductModel from "../../../../utils/models/Product";
 import { NextResponse } from "../../../../../node_modules/next/server";
 import DBConnect from "../../../../utils/config/db";
 
