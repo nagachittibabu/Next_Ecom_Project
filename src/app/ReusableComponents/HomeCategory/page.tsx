@@ -1,8 +1,13 @@
 import Link from 'next/link';
 
-const Homecard = ({ imagepath, category }) => {
+interface HomecardProps {
+  imagepath: string;
+  category: string;
+}
+
+const Homecard: React.FC<HomecardProps> = ({ imagepath, category }) => {
   return (
-    <div className="w-full h-[350px]  flex justify-center items-center text-black box-border">
+    <div className="w-full h-[350px] flex justify-center items-center text-black box-border">
       <div className="w-3/4 h-full flex justify-center items-center border rounded-lg shadow-lg overflow-hidden">
         <Link
           href={{
@@ -11,10 +16,10 @@ const Homecard = ({ imagepath, category }) => {
           }}
         >
           <div className="w-full h-full p-3 bg-white flex flex-col items-center justify-center transition-transform transform hover:scale-105">
-            <div className="w-full h-[200px]  flex justify-center items-center  rounded-t-lg ">
+            <div className="w-full h-[200px] flex justify-center items-center rounded-t-lg">
               <img
                 src={imagepath}
-                alt="pic"
+                alt={category}
                 className="w-full h-full transform transition duration-500 hover:scale-110"
               />
             </div>

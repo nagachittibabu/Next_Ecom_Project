@@ -1,9 +1,29 @@
 "use client";
-import React, { useContext, useEffect, useState, createContext } from "react";
+import React, { useContext, useEffect, useState, createContext, ReactNode } from "react";
+interface Product {
+    id: string;
+    category_name: string;
+    products: Array<{
+      id: string;
+      title: string;
+      price: number;
+      description: string;
+      image: string;
+    }>;
+  }
+  
+  interface ItemsContextValue {
+    product: Product[];
+    error: string;
+  }
+  
+const ItemsContext = createContext<ItemsContextValue | undefined>(undefined);
 
-const ItemsContext = createContext("");
+interface ItemsProviderProps {
+  children: ReactNode;
+}
 
-export default function ItemsProvider({ children }: any) {
+export default function ItemsProvider({ children }: ItemsProviderProps) {
     const [product, setProduct] = useState([]);
     const [error, setError] = useState("");
 
