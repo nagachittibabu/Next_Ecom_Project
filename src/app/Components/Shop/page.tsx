@@ -16,9 +16,9 @@ const ShopPage = () => {
             <PageNavbar />
             <div className=" w-full ">
                     <div className="">
-                        {product.map(element => {
+                        {product.map((element:any,index:any) => {
                             return (
-                                <div className="flex flex-wrap w-full">
+                                <div className="flex flex-wrap w-full" key={index}>
                                     {element.products.map(e => {
                                         return (
                                             <div className="w-1/3">

@@ -32,8 +32,9 @@ const SideNav: React.FC = () => {
                             <Link href={{
                                 pathname: "/Products",
                                 query: { category: ele.category_name }
-                            }}>
-                                <li className="p-2 hover:text-red-300 cursor-pointer  lg:text-lg md:text-base sm:text-sm" key={index}>
+                                
+                            }}key={index}>
+                                <li className="p-2 hover:text-red-300 cursor-pointer  lg:text-lg md:text-base sm:text-sm" >
                                     {ele.category_name}
                                 </li>
                             </Link>

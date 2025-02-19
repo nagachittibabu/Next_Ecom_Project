@@ -72,9 +72,9 @@ const Ecommerce = ({ username }: { username: String }) => {
                                 {product.map((element:any,index:any) => {
                                     return (
                                         <div className="w-full flex flex-wrap justify-center items-center" key={index}>
-                                            {element.products.map(e => {
+                                            {element.products.map((e:any,i:any) => {
                                                 return (
-                                                    <div className="lg:w-1/3 lg:h-[650px] md:w-1/2 sm:w-1/2 half">
+                                                    <div className="lg:w-1/3 lg:h-[650px] md:w-1/2 sm:w-1/2 half" key={i}>
                                                         <ProductCard imagepath={e.image} title={e.title} price={e.price} description={e.description} category={element.category_name} product_id={e.id} key={e.id} />
                                                     </div>
                                                 )

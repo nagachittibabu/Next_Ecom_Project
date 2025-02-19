@@ -24,7 +24,7 @@ export default function Header() {
         }
     }
         UserFetch()
-    }, [])
+    }, [searchInput])
 
     const findProducts = (searchInput, product) => {
         const lowerSearchInput = searchInput.toLowerCase();
@@ -73,8 +73,8 @@ export default function Header() {
                                         <Link href={{
                                             pathname: `/details//${1} `,
                                             query: { category: item.category, product_id: item.id }
-                                        }} >
-                                            <li key={index} className="p-2 hover:bg-gray-100 cursor-pointer bg-white ">
+                                        }}  key={index} >
+                                            <li className="p-2 hover:bg-gray-100 cursor-pointer bg-white ">
                                                 {item.title}
                                             </li>
                                         </Link>
