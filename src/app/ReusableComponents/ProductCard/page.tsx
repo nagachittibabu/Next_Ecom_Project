@@ -14,6 +14,7 @@ const ProductCard = ({
     category,
 }) => {
     const { product, error } = useItemContext();
+    let [cartText, setCartText] = useState("ADD TO CART");
     const router = useRouter()
     if (error) {
         return <div>Error fetching data: {error.message}</div>;
@@ -34,7 +35,6 @@ const ProductCard = ({
         selectedProd[0].quantity="1";
         selectedProd[0].color="Black";
         }
-    let [cartText, setCartText] = useState("ADD TO CART");
     const CartHandling = async() => {
         try {
             const response=await fetch('http://localhost:3000/utils/models/Booking')

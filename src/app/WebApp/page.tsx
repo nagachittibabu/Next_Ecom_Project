@@ -52,9 +52,9 @@ const Ecommerce = ({ username }: { username: String }) => {
                                 <h1 className="text-4xl font-bold leading-loose">Categories</h1>
                             </div>
                             {product ? (
-                                product.map((item: any) => {
+                                product.map((item: any,index:any) => {
                                     return (
-                                        <div className="lg:w-1/3 md:w-1/2 sm:w-1/2 half flex flex-wrap justify-between  h-max " onClick={() => CategoryHandle(item.category_name)} key={item.category_name}>
+                                        <div className="lg:w-1/3 md:w-1/2 sm:w-1/2 half flex flex-wrap justify-between  h-max " onClick={() => CategoryHandle(item.category_name)} key={index}>
                                             <Homecard category={item.category_name} imagepath={item.products[0].image} />
                                         </div>
                                     )
@@ -69,9 +69,9 @@ const Ecommerce = ({ username }: { username: String }) => {
                                 <h1 className="text-4xl font-bold leading-loose">Trendy Products</h1>
                             </div>
                             <div className="w-full h-[150vh] overflow-y-scroll mb-12">
-                                {product.map(element => {
+                                {product.map((element:any,index:any) => {
                                     return (
-                                        <div className="w-full flex flex-wrap justify-center items-center">
+                                        <div className="w-full flex flex-wrap justify-center items-center" key={index}>
                                             {element.products.map(e => {
                                                 return (
                                                     <div className="lg:w-1/3 lg:h-[650px] md:w-1/2 sm:w-1/2 half">

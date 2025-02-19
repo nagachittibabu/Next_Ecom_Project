@@ -24,9 +24,9 @@ export default function ProductsPage({ searchParams }: {
             <PageNavbar  />
             </div>
             <div className="w-full flex flex-wrap">
-                {productData.map((e: any) => {
+                {productData.map((e: any,index:any) => {
                     return (
-                        <div className="lg:w-1/3 md:w-1/2 sm:w-full">
+                        <div className="lg:w-1/3 md:w-1/2 sm:w-full" key={index}>
                             <ProductCard imagepath={e.image} title={e.title} product_id={e.id} price={e.price} description={e.description} category={searchParams.category} />
                         </div>
                     )

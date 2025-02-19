@@ -1,5 +1,4 @@
 "use client"
-import { useCartContext } from "@/app/contextAPI/cartProvider";
 import { useItemContext } from "@/app/contextAPI/ItemsProvider";
 import Footer from "@/app/ReusableComponents/Footer/page";
 import Header from "@/app/ReusableComponents/Header/page";

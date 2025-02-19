@@ -28,12 +28,12 @@ const SideNav: React.FC = () => {
                 </div>
                 {isMainCollapsed && (
                     <ul className=" absolute left-0 top-full w-full  bg-white border border-t-0 h-max  z-10 ">
-                        {product.map((ele: any) => (
+                        {product.map((ele: any,index:any) => (
                             <Link href={{
                                 pathname: "/Products",
                                 query: { category: ele.category_name }
                             }}>
-                                <li className="p-2 hover:text-red-300 cursor-pointer  lg:text-lg md:text-base sm:text-sm">
+                                <li className="p-2 hover:text-red-300 cursor-pointer  lg:text-lg md:text-base sm:text-sm" key={index}>
                                     {ele.category_name}
                                 </li>
                             </Link>

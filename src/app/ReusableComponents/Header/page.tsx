@@ -12,6 +12,7 @@ export default function Header() {
     if (error) { return <div>Error fetching data: {error.message}</div>; }
     if (!product) { return <div>Loading...</div>; }
     const { userDetails } = UseUserDetails(); 
+    useEffect(() => {
     const UserFetch = async () => {
         try {
             let response = await fetch("http://localhost:3000/api/users/1");
@@ -22,7 +23,6 @@ export default function Header() {
             console.log(error);
         }
     }
-    useEffect(() => {
         UserFetch()
     }, [])
 
