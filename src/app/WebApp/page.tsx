@@ -1,7 +1,6 @@
 'use client'
 import Footer from "../ReusableComponents/Footer/page";
 import Header from "../ReusableComponents/Header/page";
-import Homecard from "../ReusableComponents/HomeCategory/page"
 import ProductCard from "../ReusableComponents/ProductCard/page";
 import ServiceCard from "../ReusableComponents/Services/page";
 import { useItemContext } from "../contextAPI/ItemsProvider";
