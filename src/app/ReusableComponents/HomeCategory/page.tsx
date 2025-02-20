@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 
+interface HomecardProps {
+  imagepath: string;
+  category: string;
+}
 
-
-const Homecard=({ imagepath, category }) => {
+const Homecard: React.FC<HomecardProps> = ({ imagepath, category }) => {
   return (
     <div className="w-full h-[350px] flex justify-center items-center text-black box-border">
       <div className="w-3/4 h-full flex justify-center items-center border rounded-lg shadow-lg overflow-hidden">
