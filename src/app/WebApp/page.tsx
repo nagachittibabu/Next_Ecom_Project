@@ -50,7 +50,7 @@ const Ecommerce = ({ username }: { username: String }) => {
                             <div className="flex justify-center items-center h-2 m-10 w-full text-center">
                                 <h1 className="text-4xl font-bold leading-loose">Categories</h1>
                             </div>
-                            {product ? (
+                            {/* {product ? (
                                 product.map((item: any,index:any) => {
                                     return (
                                         <div className="lg:w-1/3 md:w-1/2 sm:w-1/2 half flex flex-wrap justify-between  h-max " onClick={() => CategoryHandle(item.category_name)} key={index}>
@@ -58,7 +58,7 @@ const Ecommerce = ({ username }: { username: String }) => {
                                         </div>
                                     )
                                 })
-                            ) : <div><h1>Loading...</h1></div>}
+                            ) : <div><h1>Loading...</h1></div>} */}
                         </div>
                         <div className="w-full bg-white rounded-md shadow-md ">
                             <div className="flex justify-center items-center h-11 m-10 w-full text-center">
