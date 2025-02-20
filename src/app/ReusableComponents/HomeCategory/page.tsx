@@ -1,14 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 
-// Define the Props Interface
-interface HomecardProps {
-  imagepath: string;
-  category: string;
-}
 
-// Apply the Props Interface to the Component
-const Homecard: React.FC<HomecardProps> = ({ imagepath, category }) => {
+
+const Homecard=({ imagepath, category }) => {
   return (
     <div className="w-full h-[350px] flex justify-center items-center text-black box-border">
       <div className="w-3/4 h-full flex justify-center items-center border rounded-lg shadow-lg overflow-hidden">
