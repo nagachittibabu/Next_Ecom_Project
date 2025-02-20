@@ -6,8 +6,8 @@ interface HomecardProps {
   category: string;
 }
 
-const Homecard: React.FC<HomecardProps> = ({ imagepath, category }) => {
-  return (
+export default function Homecard({ imagepath, category }: HomecardProps) {
+    return (
     <div className="w-full h-[350px] flex justify-center items-center text-black box-border">
       <div className="w-3/4 h-full flex justify-center items-center border rounded-lg shadow-lg overflow-hidden">
         <Link
@@ -32,4 +32,3 @@ const Homecard: React.FC<HomecardProps> = ({ imagepath, category }) => {
   );
 };
 
-export default Homecard;
